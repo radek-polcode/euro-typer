@@ -19,7 +19,6 @@ Rails.application.routes.draw do
   resources :types
   resources :winner_types
 
-  devise_for :users
   resources :users, only: [:show] do
     get '/join_competition/:competition_id' => 'users#join_competition', as: :join_competition
   end
