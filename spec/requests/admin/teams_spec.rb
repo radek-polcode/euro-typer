@@ -2,8 +2,14 @@ require 'rails_helper'
 
 RSpec.describe "Teams", type: :request do
   describe "GET /teams" do
+    let(:user) { create(:user, :admin) }
+    before do
+      headers_with_token = login(user)
+      @bearer = headers_with_token['Authorization']
+    end
+
     it "returns list of the teams" do
-      get teams_path
+      get admin_teams_path
       expect(response).to have_http_status(200)
       expect(response.content_type).to eq("application/json")
     end
