@@ -1,4 +1,4 @@
-class Admin::UsersController < AdminController
+class Admin::UsersController < Admin::AdminController
   load_and_authorize_resource
 
   # skip_before_filter :require_admin!, only: [:index]

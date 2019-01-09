@@ -1,4 +1,4 @@
-class Admin::TeamsController < AdminController
+class Admin::TeamsController < Admin::AdminController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 

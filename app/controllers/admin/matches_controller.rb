@@ -1,4 +1,4 @@
-class Admin::MatchesController < AdminController
+class Admin::MatchesController < Admin::AdminController
   before_action :set_match, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 

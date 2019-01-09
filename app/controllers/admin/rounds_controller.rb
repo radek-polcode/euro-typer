@@ -1,4 +1,4 @@
-class Admin::RoundsController < AdminController
+class Admin::RoundsController < Admin::AdminController
   before_action :set_round, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 

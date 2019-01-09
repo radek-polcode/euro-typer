@@ -1,4 +1,4 @@
-class Admin::CompetitionsController < AdminController
+class Admin::CompetitionsController < Admin::AdminController
   before_action :set_competition, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 

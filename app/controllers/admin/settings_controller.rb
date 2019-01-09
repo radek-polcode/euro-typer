@@ -1,4 +1,4 @@
-class Admin::SettingsController < AdminController
+class Admin::SettingsController < Admin::AdminController
   before_action :set_setting, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
