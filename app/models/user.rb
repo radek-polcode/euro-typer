@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  devise :database_authenticatable,
+         :jwt_authenticatable,
+         jwt_revocation_strategy: Devise::JWT::RevocationStrategies::Null
+
   ROLES = %i[admin registered guest]
 
   has_many :types
