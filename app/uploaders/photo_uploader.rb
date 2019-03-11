@@ -1,18 +1,18 @@
 class PhotoUploader < CarrierWave::Uploader::Base
-  include Cloudinary::CarrierWave
   include CarrierWave::MiniMagick
 
-  def public_id
-    random_id = Cloudinary::Utils.random_public_id
+  storage :aws
+
+  def store_dir
     case Rails.env
     when 'test'
-      "typerek/test/#{@model.class.name.downcase}/photo/" + random_id
+      "uploads/test/#{@model.class.name.downcase}/photo/test_photo/"
     when 'development'
-      "typerek/development/#{@model.class.name.downcase}/photo/" + random_id
+      "uploads/development/#{@model.class.name.downcase}/photo/#{@model.id}"
     when 'production'
-      "typerek/production/#{@model.class.name.downcase}/photo/" + random_id
+      "uploads/production/#{@model.class.name.downcase}/photo/#{@model.id}"
     else
-      "typerek/all/#{@model.class.name.downcase}/" + random_id
+      "uploads/all/#{@model.class.name.downcase}/#{@model.id}"
     end
   end
 
