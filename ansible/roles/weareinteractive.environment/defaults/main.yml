@@ -21,5 +21,6 @@ environment_config: {
   DB_NAME: "{{ db_name }}",
   DB_USER: "{{ db_user }}",
   DB_PASSWORD: "{{ db_password }}",
+  RAILS_MASTER_KEY: "{{ rails_master_key }}",
   SECRET_KEY_BASE: "{{ secret_key_base }}"
 }
