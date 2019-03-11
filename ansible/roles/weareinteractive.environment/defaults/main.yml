@@ -11,7 +11,10 @@ environment_file_group: root
 # environment_config:
 #   LC_ALL: en_US.UTF-8
 environment_config: {
-  CLOUDINARY_CLOUD_NAME: "{{ cloudinary_cloud_name }}",
+  AWS_ACCESS_KEY_ID: "{{ aws_access_key_id }}",
+  AWS_REGION: "{{ aws_region }}",
+  AWS_S3_BUCKET_NAME: "{{ aws_s3_bucket_name }}",
+  AWS_SECRET_ACCESS_KEY: "{{ aws_secret_access_key }}",
   CLOUDINARY_API_KEY: "{{ cloudinary_api_key }}",
   CLOUDINARY_API_SECRET: "{{ cloudinary_api_secret }}",
   CLOUDINARY_URL: "{{ cloudinary_url }}",

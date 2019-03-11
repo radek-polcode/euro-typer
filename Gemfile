@@ -16,6 +16,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'carrierwave-base64'
 gem 'carrierwave-aws'
 # gem 'cloudinary' <- bug on production, might be useful when fixed https://github.com/cloudinary/cloudinary_gem/issues/334
+gem 'dotenv-rails'
 gem 'faraday'
 gem 'countries'
 gem 'select2-rails'
@@ -43,7 +44,6 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
-  gem 'dotenv-rails'
   gem 'pry'
   gem 'pry-rails'
   gem 'pry-doc'
