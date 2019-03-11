@@ -1,6 +1,6 @@
 class TeamSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :abbreviation, :flag, :name, :name_en, :photo
+  attributes :abbreviation, :flag, :name, :name_en
 
   has_many :first_team
   has_many :second_team
