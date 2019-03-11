@@ -43,15 +43,21 @@ create_countries
 # walia             = create_country("Walia", "WAL").id
 # wegry             = create_country("Węgry", "HUN").id
 # wlochy            = create_country("Włochy", "ITA").id
+def create_users
+  file = File.read("#{Rails.root}/spec/fixtures/files/photo.jpg")
+  base64_encoded_file = "data:image/png;base64," + Base64.encode64(file)
 
-admin = User.where(username: 'admin', email: 'admin@typerek.com').first_or_create do |user|
-  user.password = 'typerek1'
-  user.role = 'admin'
-end
-
-user = User.where(username: 'registered_user', email: 'registered_user@typerek.com').first_or_create do |user|
-  user.password = 'typerek1'
-  user.role = 'registered'
+  admin = User.where(username: 'admin', email: 'admin@typerek.com').first_or_create do |user|
+    user.password = 'typerek1'
+    user.role = 'admin'
+    user.photo = base64_encoded_file
+  end
+  
+  user = User.where(username: 'registered_user', email: 'registered_user@typerek.com').first_or_create do |user|
+    user.password = 'typerek1'
+    user.role = 'registered'
+    user.photo = base64_encoded_file
+  end
 end
 
 competition = Competition.where(name: 'default_competition').first_or_create do |competition|
