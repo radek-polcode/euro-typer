@@ -19,7 +19,7 @@ class UserSerializer
         'url' => object.photo.thumb.url
       },
       'medium' => {
-        'url' => object.photo.thumb.url
+        'url' => object.photo.medium.url
       } }
   end
 
