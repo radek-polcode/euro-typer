@@ -60,6 +60,8 @@ def create_users
   end
 end
 
+create_users
+
 competition = Competition.where(name: 'default_competition').first_or_create do |competition|
   competition.end_date = Date.today - 20.days
   competition.place = 'Pilczyca'
