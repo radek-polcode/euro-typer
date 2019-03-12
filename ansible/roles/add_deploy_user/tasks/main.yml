@@ -6,3 +6,7 @@
   authorized_key:
     user: deploy
     key: "{{ vault_ssh_public_key }}"
+- name: Add Sempahore SSH key to server for deploy user
+  authorized_key:
+    user: deploy
+    key: "{{ vault_ssh_semaphore_key }}"
