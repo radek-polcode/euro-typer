@@ -293,6 +293,34 @@ RSpec.describe 'Admin::Teams', type: :request do
             )
           end
         end
+
+        describe 'removing photo' do
+          before do
+            VCR.use_cassette('associate_photo_with_team') do
+              team.photo = Rack::Test::UploadedFile.new(Rails.root.join('spec/fixtures/files/photo.jpg'), 'image/jpeg')
+              team.save
+              team.reload
+            end
+          end
+
+          let(:attributes) do
+            { "remove_photo": true }
+          end
+
+          it 'removes photo from team' do
+            VCR.use_cassette('remove_photo_from_team') do
+              expect(team.photo.url).to include('http://res.cloudinary.com/')
+              expect(team.photo.file).to be
+
+              patch "/admin/teams/#{team.id}",
+                  params: params,
+                  headers: @auth_headers
+
+              expect(team.reload.photo.url).to be_nil
+              expect(team.reload.photo.file).to be_nil
+            end
+          end
+        end
       end
 
       describe 'DELETE /admin/team/:id' do
