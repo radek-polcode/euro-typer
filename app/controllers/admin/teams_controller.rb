@@ -46,6 +46,7 @@ class Admin::TeamsController < AdminController
         :abbreviation,
         :flag,
         :photo,
+        :remove_photo,
         :name_en
       ]
     )
