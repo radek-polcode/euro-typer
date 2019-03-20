@@ -37,6 +37,7 @@ class Admin::UsersController < AdminController
           :email,
           :password,
           :photo,
+          :remove_photo,
           :role,
           :take_part,
           :username,

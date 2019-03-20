@@ -192,6 +192,34 @@ RSpec.describe "Admin::Users", type: :request do
             )
           end
         end
+
+        describe 'removing photo' do
+          before do
+            VCR.use_cassette('associate_photo_with_user_registered') do
+              user_registered.photo = Rack::Test::UploadedFile.new(Rails.root.join('spec/fixtures/files/photo.jpg'), 'image/jpeg')
+              user_registered.save
+              user_registered.reload
+            end
+          end
+
+          let(:attributes) do
+            { "remove_photo": true }
+          end
+
+          it 'removes photo from user_registered' do
+            VCR.use_cassette('remove_photo_from_user_registered') do
+              expect(user_registered.photo.url).to include('http://res.cloudinary.com/')
+              expect(user_registered.photo.file).to be
+
+              patch "/admin/users/#{user_registered.id}",
+                  params: params,
+                  headers: @auth_headers
+
+                  expect(user_registered.reload.photo.url).to be_nil
+              expect(user_registered.reload.photo.file).to be_nil
+            end
+          end
+        end
       end
 
       describe "DELETE /admin/user/:id" do
