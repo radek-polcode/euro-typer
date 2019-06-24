@@ -47,10 +47,23 @@ RSpec.describe "Admin::Competitions", type: :request do
               headers: @auth_headers
         end
 
+        let(:index_request_include) do
+          get '/admin/competitions?include=rounds',
+              headers: @auth_headers
+        end
+
         it 'returns all instances' do
           index_request
           expect(response).to have_http_status(200)
           expect(json_data.size).to eq model.all.count
+        end
+
+        it 'returns included rounds' do
+          create(:round, competition: instance)
+
+          index_request_include
+          expect(response).to have_http_status(200)
+          expect(json_included.size).to eq 1
         end
       end
 
