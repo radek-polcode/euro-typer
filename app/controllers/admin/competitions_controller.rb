@@ -1,10 +1,11 @@
 class Admin::CompetitionsController < AdminController
   before_action :set_competition, only: [:show, :update, :destroy]
+  before_action :set_options, only: [:index]
   load_and_authorize_resource
 
   def index
     @competitions = Competition.all
-    json_response(CompetitionSerializer, @competitions)
+    json_response(CompetitionSerializer, @competitions, @options_hash)
   end
 
   def show
@@ -42,5 +43,12 @@ class Admin::CompetitionsController < AdminController
         :winner_id
       ]
     )
+  end
+
+  def set_options
+    @options_hash = {}
+    return @options_hash unless params[:include].present?
+    @options_hash[:include] = [params[:include].to_sym]
+    @options_hash
   end
 end
