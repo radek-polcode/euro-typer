@@ -1,4 +1,4 @@
-server "ec2-18-197-115-59.eu-central-1.compute.amazonaws.com", user: "deploy", roles: %w(web app db)
+server '51.83.250.84', user: 'deploy', roles: %w{app db web}
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
