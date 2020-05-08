@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.5.0'
+ruby '2.6.5'
 
 gem 'rails', '5.2.0'
 gem 'pg', '~> 0.18.4'
@@ -9,7 +9,7 @@ gem 'jbuilder'
 gem 'sdoc',          group: :doc
 
 gem 'bootsnap', require: false
-gem 'devise_token_auth'
+gem 'devise_token_auth', '1.0.0'
 gem 'cancancan'
 gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 gem 'carrierwave', '~> 1.0'
