@@ -12,6 +12,6 @@ FactoryBot.define do
   end
 
   trait :no_rounds do |competition|
-    competition.rounds []
+    competition.rounds { [] }
   end
 end
