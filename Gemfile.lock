@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/ryanb/letter_opener.git
-  revision: ca1cea1638939c1417b1c186bfdffdc1a8e4d64f
+  remote: https://github.com/ryanb/letter_opener.git
+  revision: 07043170e9b569482da6ab0f2b2c35f5175f2268
   specs:
     letter_opener (1.7.0)
       launchy (~> 2.2)
@@ -354,4 +354,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.17.3
+   2.1.4
