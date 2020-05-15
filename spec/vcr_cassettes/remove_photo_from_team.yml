@@ -5,18 +5,18 @@ http_interactions:
     uri: https://api.cloudinary.com/v1_1/dduxwswhn/image/destroy
     body:
       encoding: UTF-8
-      string: timestamp=1552479610&type=upload&public_id=typerek%2Ftest%2Fteam%2Fphoto%2Foe0tp3rpngnbj7olptnf&signature=e44a47c74caf67903c3202d9255d66cae49b5282&api_key=327463145683245
+      string: timestamp=1589540179&type=upload&public_id=typerek%2Ftest%2Fteam%2Fphoto%2Fwrbfqzbod5uag9jooyjr&signature=226e9672fe7b0ad7c066d2c471fd126c3a9f15c0&api_key=327463145683245
     headers:
       Accept:
       - "*/*"
-      Accept-Encoding:
-      - gzip, deflate
       User-Agent:
       - CloudinaryRuby/1.11.1
       Content-Length:
       - '170'
       Content-Type:
       - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Host:
       - api.cloudinary.com
   response:
@@ -26,20 +26,20 @@ http_interactions:
     headers:
       Cache-Control:
       - max-age=0, private, must-revalidate
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 13 Mar 2019 12:20:10 GMT
+      - Fri, 15 May 2020 10:56:20 GMT
       Etag:
       - W/"b0eb02791543d20d789c22724329c8bc"
       Server:
       - cloudinary
       Status:
       - 200 OK
+      Vary:
+      - Accept-Encoding
       X-Request-Id:
-      - fd76e25e32c6388d
+      - 817e60c853f621374c18d39aa9905c2f
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       X-Xss-Protection:
@@ -50,27 +50,26 @@ http_interactions:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA6pWKkotLs0pUbJSys9WqgUAAAD//wMAzH7GRA8AAAA=
-    http_version: 
-  recorded_at: Wed, 13 Mar 2019 12:20:10 GMT
+      string: '{"result":"ok"}'
+    http_version: null
+  recorded_at: Fri, 15 May 2020 10:56:20 GMT
 - request:
     method: post
     uri: https://api.cloudinary.com/v1_1/dduxwswhn/image/destroy
     body:
       encoding: UTF-8
-      string: timestamp=1552479610&type=upload&public_id=typerek%2Ftest%2Fteam%2Fphoto%2Foe0tp3rpngnbj7olptnf&signature=e44a47c74caf67903c3202d9255d66cae49b5282&api_key=327463145683245
+      string: timestamp=1589540180&type=upload&public_id=typerek%2Ftest%2Fteam%2Fphoto%2Fwrbfqzbod5uag9jooyjr&signature=243ba91f1b5af7de9b1825d52746ca30c2c62212&api_key=327463145683245
     headers:
       Accept:
       - "*/*"
-      Accept-Encoding:
-      - gzip, deflate
       User-Agent:
       - CloudinaryRuby/1.11.1
       Content-Length:
       - '170'
       Content-Type:
       - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Host:
       - api.cloudinary.com
   response:
@@ -80,32 +79,31 @@ http_interactions:
     headers:
       Cache-Control:
       - max-age=0, private, must-revalidate
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 13 Mar 2019 12:20:11 GMT
+      - Fri, 15 May 2020 10:56:21 GMT
       Etag:
       - W/"33747e3f086d5dd0aef7ac1fde8cf595"
       Server:
       - cloudinary
       Status:
       - 200 OK
+      Vary:
+      - Accept-Encoding
       X-Request-Id:
-      - 3127de6aaf675142
+      - a9b23db6ccba57615b6038cfffb6e39f
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       X-Xss-Protection:
       - 1; mode=block
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '48'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAAwAAAP//qlYqSi0uzSlRslLKyy9RSMsvzUtRqgUAAAD//wMA8jYD7xYAAAA=
-    http_version: 
-  recorded_at: Wed, 13 Mar 2019 12:20:11 GMT
-recorded_with: VCR 4.0.0
+      string: '{"result":"not found"}'
+    http_version: null
+  recorded_at: Fri, 15 May 2020 10:56:21 GMT
+recorded_with: VCR 5.1.0

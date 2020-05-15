@@ -5,18 +5,18 @@ http_interactions:
     uri: https://api.cloudinary.com/v1_1/dduxwswhn/image/destroy
     body:
       encoding: UTF-8
-      string: timestamp=1553084070&type=upload&public_id=typerek%2Ftest%2Fuser%2Fphoto%2Fzl8ceoafvvmvlbpipr5u&signature=47b22a0bed021abca451ca6266d713f649a7c0b2&api_key=327463145683245
+      string: timestamp=1589540115&type=upload&public_id=typerek%2Ftest%2Fuser%2Fphoto%2Fneo0izlyq9kfcgwfsimu&signature=30bd054c7d36b8dd0fd0e849000179bdd0dad722&api_key=327463145683245
     headers:
       Accept:
       - "*/*"
-      Accept-Encoding:
-      - gzip, deflate
       User-Agent:
       - CloudinaryRuby/1.11.1
       Content-Length:
       - '170'
       Content-Type:
       - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Host:
       - api.cloudinary.com
   response:
@@ -26,20 +26,73 @@ http_interactions:
     headers:
       Cache-Control:
       - max-age=0, private, must-revalidate
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 20 Mar 2019 12:14:31 GMT
+      - Fri, 15 May 2020 10:55:16 GMT
       Etag:
       - W/"b0eb02791543d20d789c22724329c8bc"
       Server:
       - cloudinary
       Status:
       - 200 OK
+      Vary:
+      - Accept-Encoding
       X-Request-Id:
-      - e84a617a1b1eed32
+      - 51da6e592813bd1c4c8c0d93c634919b
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '46'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"result":"ok"}'
+    http_version: null
+  recorded_at: Fri, 15 May 2020 10:55:16 GMT
+- request:
+    method: post
+    uri: https://api.cloudinary.com/v1_1/dduxwswhn/image/destroy
+    body:
+      encoding: UTF-8
+      string: timestamp=1589540116&type=upload&public_id=typerek%2Ftest%2Fuser%2Fphoto%2Fneo0izlyq9kfcgwfsimu&signature=1e54aa0191cf9c88101650f3aaf757e6f974c072&api_key=327463145683245
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - CloudinaryRuby/1.11.1
+      Content-Length:
+      - '170'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.cloudinary.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 15 May 2020 10:55:17 GMT
+      Etag:
+      - W/"33747e3f086d5dd0aef7ac1fde8cf595"
+      Server:
+      - cloudinary
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Request-Id:
+      - 2f166dec70090851eb25c64d6dd6acde
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       X-Xss-Protection:
@@ -50,62 +103,7 @@ http_interactions:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAAwAAAP//qlYqSi0uzSlRslLKz1aqBQAAAP//AwDMfsZEDwAAAA==
-    http_version: 
-  recorded_at: Wed, 20 Mar 2019 12:14:31 GMT
-- request:
-    method: post
-    uri: https://api.cloudinary.com/v1_1/dduxwswhn/image/destroy
-    body:
-      encoding: UTF-8
-      string: timestamp=1553084071&type=upload&public_id=typerek%2Ftest%2Fuser%2Fphoto%2Fzl8ceoafvvmvlbpipr5u&signature=d644fc1a31ecf27312f405a97460475706ceaddb&api_key=327463145683245
-    headers:
-      Accept:
-      - "*/*"
-      Accept-Encoding:
-      - gzip, deflate
-      User-Agent:
-      - CloudinaryRuby/1.11.1
-      Content-Length:
-      - '170'
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Host:
-      - api.cloudinary.com
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      Content-Encoding:
-      - gzip
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 20 Mar 2019 12:14:32 GMT
-      Etag:
-      - W/"33747e3f086d5dd0aef7ac1fde8cf595"
-      Server:
-      - cloudinary
-      Status:
-      - 200 OK
-      X-Request-Id:
-      - 5a16518731dbc412
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      X-Xss-Protection:
-      - 1; mode=block
-      Content-Length:
-      - '48'
-      Connection:
-      - keep-alive
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA6pWKkotLs0pUbJSyssvUUjLL81LUaoFAAAA//8DAPI2A+8WAAAA
-    http_version: 
-  recorded_at: Wed, 20 Mar 2019 12:14:32 GMT
-recorded_with: VCR 4.0.0
+      string: '{"result":"not found"}'
+    http_version: null
+  recorded_at: Fri, 15 May 2020 10:55:17 GMT
+recorded_with: VCR 5.1.0
