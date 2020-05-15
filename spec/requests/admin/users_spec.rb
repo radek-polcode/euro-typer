@@ -54,7 +54,7 @@ RSpec.describe "Admin::Users", type: :request do
         it "returns list of the users" do
           index_request
           expect(response).to have_http_status(200)
-          expect(response.content_type).to eq("application/json")
+          expect(response.media_type).to eq("application/json")
           expect(json_data.size).to eq model.all.count
         end
 
@@ -72,7 +72,7 @@ RSpec.describe "Admin::Users", type: :request do
           it "returns list of deleted users" do
             index_request
             expect(response).to have_http_status(200)
-            expect(response.content_type).to eq("application/json")
+            expect(response.media_type).to eq("application/json")
             expect(json_data.size).to eq model.deleted.count
           end
         end
@@ -88,7 +88,7 @@ RSpec.describe "Admin::Users", type: :request do
           it 'returns user with id provided' do
             show_request
             expect(response).to have_http_status(200)
-            expect(response.content_type).to eq("application/json")
+            expect(response.media_type).to eq("application/json")
             expect(json_data['id']).to eq(user_registered.id.to_s)
           end
         end
