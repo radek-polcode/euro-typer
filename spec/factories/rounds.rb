@@ -2,7 +2,7 @@
 
 FactoryBot.define do
   factory :round do
-    name { Faker::DragonBall.character }
+    name { Faker::JapaneseMedia::DragonBall.character }
     competition
     started_at { Time.now.strftime("%FT%T") } 
   end
