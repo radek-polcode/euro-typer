@@ -9,7 +9,7 @@ gem 'jbuilder'
 gem 'sdoc',          group: :doc
 
 gem 'bootsnap', require: false
-gem 'devise_token_auth', '1.0.0'
+gem 'devise_token_auth'
 gem 'cancancan'
 gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 gem 'carrierwave', '~> 1.0'
