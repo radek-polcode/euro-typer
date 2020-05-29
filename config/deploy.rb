@@ -1,5 +1,4 @@
 # config valid for current version and patch releases of Capistrano
-require File.expand_path("./environment", __dir__)
 
 lock "~> 3.14.0"
 
